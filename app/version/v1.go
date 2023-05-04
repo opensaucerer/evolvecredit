@@ -3,6 +3,7 @@ package version
 import (
 	"github.com/opensaucerer/barf/app/route"
 	"github.com/opensaucerer/barf/app/route/v1/account"
+	"github.com/opensaucerer/barf/app/route/v1/transaction"
 	"github.com/opensaucerer/barf/app/route/v1/user"
 )
 
@@ -11,5 +12,5 @@ func V1() {
 	route.RegisterHomeRoutes()
 	user.RegisterUserRoutes()
 	account.RegisterAccountRoutes()
-	// transaction.RegisterTransactionRoutes()
+	transaction.RegisterTransactionRoutes()
 }
