@@ -56,3 +56,4 @@ Link to [Postman Documentation](https://documenter.getpostman.com/view/11854111/
 - I wasn't really sure if unlocking was meant to be automated or manual but since I kept most engineering focus on `without payment automation`, I made it manaul. However, this can be automated by adding a cron job that runs at some configured interval to unlock funds whose lock duration has expired.
 - Pagination can be added to endpoints that return lists of data.
 - When generating account numbers, concurrent requests can potentially generate the same account number. This can be improved by using a mutex lock or a channel to ensure that only one request is generating an account number at a time.
+- I did not include foreign keys in my tables while means PostgreSQL is unaware of the relationships they share. To enforce data consistency and avoid the possibility of orphaned rows, it would be ideal to include foreign keys. 
