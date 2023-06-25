@@ -1,6 +1,7 @@
 package controller
 
 import (
+	"log"
 	"net/http"
 
 	"github.com/opensaucerer/barf"
@@ -16,6 +17,8 @@ func Home(w http.ResponseWriter, r *http.Request) {
 		Description: "Banking as a service.",
 		Website:     "https://zeinamfibyopensaucerer.onrender.com",
 	}
+
+	log.Println("RECEIVED FROM :: " + r.Host)
 
 	barf.Response(w).Status(http.StatusOK).JSON(barf.Res{
 		Status:  true,
